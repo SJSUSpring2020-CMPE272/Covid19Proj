@@ -22,8 +22,8 @@ Project Idea3:
 3. For the parties and the citizen
 4. Python, twitter API, tweepy , web crawler technology, PHP
 
-Project Idea-4: 
-1、	Project Title:
+Project Idea-4:  
+1、	Project Title:  
     Streetlamp Energy-Saving System
 2、	Project idea description:
     This is a business project in which I participated developed by Chongqing Green Technology co., LTD in China from 2015-2018. In the project, the system collects environmental data, such as illumination, temperature humidity and PM2.5, uploads them to the server. After comprehensive calculation and overall processing, the brightness and color temperature of the street lights can be automatically adjusted (also can be monitored and maintained through the app), making road lighting more energy efficient and driving safety.
