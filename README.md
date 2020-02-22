@@ -105,3 +105,23 @@ Parking is a big issue nowadays due to the increasing number of cars,traditional
 Car owners and the parking lot managers.
 4. Technology stack : 
 Front-end:react.js html css jsx redux. back-end:python mongoDB,TensorFlow.
+
+Project Idea 10:
+1. Project title: Auto Insurance Selection Helper
+2. Idea description: There are a ton of auto insurance companies in the market. And each company offers various kinds of plans and policies. Costumers also cares how the plan they chosen actullay work. Using AI to consider budget, bill period, service reaction speed, plan content and so on. This application will recommend an auto insurance plan.
+3. Goal of the project: People who need buy an auto insurance.
+4. Technology stack: mircoservice, python, AI framework like TensorFlow and Database
+
+Project Idea 11:
+1. Project title: Identify Music Style and Creat Music by Style
+2. Idea description: There are so many kinds of music among the world. It's a huge for human to sort them. If we use artificial intelligence to do it, it will be a big help. After learned how to identify music, it even could help us to create the specific music.
+3. Goal of the project: Music fan and musician
+4. Technology stack: : python, deep learning framework.
+
+Project Idea 12:
+1. Project title: Smart Supply Chain System
+2. Idea description: The smart supply chain system mamanges whole supply chain from Factories or farms to merchants. It monitors and collects the data from factories, carriers, and merchant to predict and control the operation of supply chain. It's a large scale system based on cloud.
+3. Goal of the project: Owner of factories, farm, carrier and merchants.
+4. Technology stack: cloud computing, AI framework, angularJS, database systems.
+
+   
