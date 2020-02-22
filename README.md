@@ -77,31 +77,31 @@ Project Idea-6:
 
 
 Project Idea7:
-1. Project Title
+1. Project Title : 
 Job Hunting
-2. Project idea description
+2. Project idea description : 
 Provide the platform for students and companies to conveniently find job and employees,companies can post jobs on the platform and students can apply them,the top jobs shown on students’ page are selected by the students’ basic information and preference based on their regular browsing and the jobs applied.
-3. Goal of the project (who are you developing the project for)
+3. Goal of the project (who are you developing the project for) : 
 Companies and students.
 4. Technology stack
 Front-end:react.js html css node.js. back-end:java mysql TensorFlow
 
 Project Idea8:
-1. project title
+1. project title : 
 mental illness killer
-2. idea description
+2. idea description : 
 Nowadays,mental illness especially depression become really serious.I believe the number of psychological patients will be reduced by using mental illness killer,the system will detect people’s emotion by capturing their facial expression,by training plenty of data,system will accurately recognize patients’ mental problem,like depression,sadness,anxiety etc.Finally,the system will give advice about the top hospitals,the most useful drugs,recommendations from other cured patients with similar problem.
-3. Goal of the project
+3. Goal of the project : 
 People with light or serious mental problem
-4. Technology stack
+4. Technology stack : 
 Front-end:react.js html css jsx redux. back-end:python mongoDB,TensorFlow.
 
 Project Idea9:
-1. project title
+1. project title : 
 Intelligent parking
-2. Idea description
+2. Idea description : 
 Parking is a big issue nowadays due to the increasing number of cars,traditional way of parking which is operated by human waste time and energy.Intelligent parking system can detect the plate of the car,pay the parking fee and exit the parking lot.
-3. Goal of the project
+3. Goal of the project : 
 Car owners and the parking lot managers.
-4. Technology stack
+4. Technology stack : 
 Front-end:react.js html css jsx redux. back-end:python mongoDB,TensorFlow.
