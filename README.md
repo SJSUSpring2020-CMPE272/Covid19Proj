@@ -40,13 +40,9 @@ also some package to Visualize data
 ### 1、Project Title:  
 Streetlamp Energy-Saving System  
 ### 2、Project idea description:  
- This is a business project in which I participated developed by Chongqing Green Technology co., LTD in China from 2015-2018. In the project, the system collects environmental data, such as illumination, temperature humidity and PM2.5, uploads them to the server. After comprehensive calculation and overall processing, the brightness and color temperature of the street lights can be automatically adjusted (also can be monitored and maintained through the app), making road lighting more energy efficient and driving safety.  
- 
-In this project, we use expert system to calculate the brightness and color temperature that satisfies the road environment well. Then I tried to learn about SVM(Support Vector Machine), which is a classic method in machine learning, and apply it on the system. I also wrote a paper as my graduation prerequisite to get the master’s degree in China. It’s as bellow:  
+This is a business project in which I participated developed by Chongqing Green Technology co., LTD in China from 2015-2018. In the project, the system collects environmental data, such as illumination, temperature humidity and PM2.5, uploads them to the server. After comprehensive calculation and overall processing, the brightness and color temperature of the street lights can be automatically adjusted (also can be monitored and maintained through the app), making road lighting more energy efficient and driving safety.In this project, we use expert system to calculate the brightness and color temperature that satisfies the road environment well.   
 
-Wen Junhao, Wan Yuan, Zeng Jun, Wang Xibin, Liang Guanzhong. Application of illumination clustering and SVM in energy-saving control strategy of street lamps[J]. Computer Science, 2019(7).  
-
-But in the half way I left the company and the research stopped. If conditions allow, I want to continue my research on the Streetlamp Energy-Saving System with SVM or other machine learning algorithms.  
+Originally I planned upgrade the system to the 2nd stage, applying SVM(Support Vector Machine), which is a classic method in machine learning, on the project instead of expert system. But on the half way I left the company and the research of machine learning stopped. If conditions allow, I want to continue my research on the Streetlamp Energy-Saving System with SVM or other machine learning platforms like TensorFlow to uptimize the project, making it more efficient on energy saving and traffic safety.
 
 ### 3、Goal of the project (who are you developing the project for)  
 The project is to realize energy-saving on streetlamps. Usually the power of LED streetlight is 150W and 120W on the road and 60W in the tunnel. Urban road lighting consumes about 30% of China's total lighting power consumption. And If we can adjust the power of streetlamps according to traffic, we can save much energy. Also we can adjust the color temperature between white and yellow, which can help drivers to see the road more clearly in different weather.  
