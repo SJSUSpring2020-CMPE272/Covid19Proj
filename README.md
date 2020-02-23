@@ -106,7 +106,7 @@ Provide the platform for students and companies to conveniently find job and emp
 ### 3.Goal of the project (who are you developing the project for) : 
 Companies and students.
 ### 4.Technology stack
-Front-end:react.js html css node.js. back-end:java mysql TensorFlow
+Front-end:react.js html css node.js back-end:java mysql. AI framwork: TensorFlow. rest style system.
 
 ## Project Idea8:
 ### 1.project title : 
@@ -116,7 +116,7 @@ Nowadays,mental illness especially depression become really serious.I believe th
 ### 3.Goal of the project : 
 People with light or serious mental problem
 ### 4.Technology stack : 
-Front-end:react.js html css jsx redux. back-end:python mongoDB,TensorFlow,rest style system.
+Front-end:react.js html css jsx redux. back-end:python mongoDB, AI framwork: TensorFlow. rest style system.
 
 ## Project Idea9:
 ### 1.project title : 
@@ -126,13 +126,13 @@ Parking is a big issue nowadays due to the increasing number of cars,traditional
 ### 3.Goal of the project : 
 Car owners and the parking lot managers.
 ### 4.Technology stack : 
-Front-end:react.js html css jsx redux. back-end:python mongoDB,TensorFlow.
+Front-end:react.js html css jsx redux. back-end:python mongoDB, AI framwork: TensorFlow. rest style system.
 
 ## Project Idea 10:
 ### 1.Project title: 
 Auto Insurance Selection Helper
 ### 2.Idea description: 
-There are a ton of auto insurance companies in the market. And each company offers various kinds of plans and policies. Costumers also cares how the plan they chosen actullay work. Using AI to consider budget, bill period, service reaction speed, plan content and so on. This application will recommend an auto insurance plan.
+There are a ton of auto insurance companies in the market. And each company offers various kinds of plans and policies. Customer may be confused by that. And customer also care how the plan they chosen actullay work. For the purpose of easy choosing, this application intend to help customer to choose the right one insurance that considering about their need, such as budget, bill cycle, liability waiver, service reacting speed and so on. The data we need is that different policies in differenct companies and whhich kind of people to choose that policy. By using deep learning, we can perdict and help customer to choose.
 ### 3.Goal of the project: 
 People who need buy an auto insurance.
 ### 4.Technology stack: 
@@ -142,7 +142,7 @@ mircoservice, python, AI framework like TensorFlow and Database
 ### 1.Project title: 
 Identify Music Style and Creat Music by Style
 ### 2.Idea description: 
-There are so many kinds of music among the world. It's a huge for human to sort them. If we use artificial intelligence to do it, it will be a big help. After learned how to identify music, it even could help us to create the specific music.
+There are so many kinds of music among the world. For the music fan who collect lots of music, this application intend to help them identify and sort the music by style. I personally occurs the suitation that I collect a song but I don't know which kind of it. This application would be help.In further, after it learned how to identify music, this application can be more advanced to create specific music by style. Musician may use this function to help them get inspration from the music created by the application and improve their own creation.
 ### 3.Goal of the project: 
 Music fan and musician
 ### 4.Technology stack: : 
@@ -150,9 +150,9 @@ python, deep learning framework.
 
 ## Project Idea 12:
 ### 1.Project title: 
-Smart Supply Chain System
+Cloud based Smart Supply Chain System
 ### 2.Idea description: 
-The smart supply chain system mamanges whole supply chain from Factories or farms to merchants. It monitors and collects the data from factories, carriers, and merchant to predict and control the operation of supply chain. It's a large scale system based on cloud.
+The smart supply chain system mamanges whole supply chain from Factories or farms to merchants. Sometimes due to latency of communication among factory, carrier and merchant, weather conditions, and traffic condition, there is a high cost of transportation and storage of products. This system is large scale cloud based that supposed to support at least fifty users including factories, carriers and merchants. The system monitors the condition of weather, traffic, warehouse occupation to decide if the product could be delivered to warehouse or directly to merchants. Each user also can log into the system to look where the product is and what conditions are.
 ### 3.Goal of the project: 
 Owner of factories, farm, carrier and merchants.
 ### 4.Technology stack: 
