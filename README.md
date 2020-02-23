@@ -22,13 +22,19 @@ DB: mongo DB, aws  Front end: JavaFX  Backend: Java
 
 ## Project Idea3:
 ### 1.  Project Title:
-President Predict
+Next President Prediction
 ### 2.  Project idea description:
-Gather and analyze tweet data about topic of president vote, predict the percentage rate of candidate of next US president. In my undergraduate data science course, I have done a similar project like this. That project is to analyze Trump's twitter. We used python package like sentiment analysis to analyze the sentiment influence of Trump's tweet. For this project, we can analyze the news or tweets to recognize currently which president is the most welcome, and can receive residents' trust. We also will add more features and try to make this model more close to the reality. 
+This is a project that used to predict the successful rate---to be elected as the next United State president---for each candidate. The ultimate goal is to predict who is the next president. However, according to the schedule of president vote, we cannot wait until the end of president vote and check the result with the reality. We could built a modle/predict simulator and try our best to make it practice in the reality.
+
+We would Gather and analyze tweet data from the topic of president vote, then we could use sentiment analysis and some statistic model to train the data, then predict the ratio of next president. And we will visualize our result. 
+
+In my undergraduate data science course, I have done a similar project like this. That project is to analyze Trump's twitter. We used python package like sentiment analysis to analyze the sentiment influence of Trump's tweet. For this project, rather than just focus on the twitter's data, we also can grab more data from several famous news website. Analyze the news and tweets to recognize currently which president is the most welcome, and can receive residents' trust. We will add more features and make this model more close to the reality in the project process. 
 ### 3. Goal of the project (who are you developing the project for)
-For the parties and the citizen
+For the parties and the citizen. Parties can know their situation in the competition. They could adjust their strategy according to the data report. For example, which kinds of problem is the most concern in citizen's mind. What points that arise residents' dissatisfied in opponent party. What kinds of words or speech theme could most easily get people trust and get votes. etc...
 ### 4. Technology stack:
-Python, twitter API, tweepy , web crawler technology, PHP
+For gathering data: Python, twitter API, tweepy , web crawler technology, PHP
+For analysis: statistic model, machine learning model, general numerical and analysis package from python
+also some package to Visualize data
 
 ## Project Idea-4:  
 ### 1、Project Title:  
