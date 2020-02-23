@@ -1,14 +1,19 @@
-ProjectGroup-6
-===============
+#ProjectGroup-6
 ## Project Idea1:
-### 1. Project Title:
-shopping bot(snkrs/supreme)
-### 2. Project idea description:
-Create a bot that help people acclerate the speed of buying hype sneaker or clothes. For supreme website, it will have a system that detects bot. We need to personify bot's movement, meanwhile minimize the time of adding to cart and check out. 
+### 1.  Project Title:
+Next President Prediction
+### 2.  Project idea description:
+This is a project that used to predict the successful rate---to be elected as the next United State president---for each candidate. The ultimate goal is to predict who is the next president. However, according to the schedule of president vote, we cannot wait until the end of president vote and check the result with the reality. We could built a model/predict simulator and try our best to make it practice in the reality.
+
+We would gather and analyze tweet data from the topic of president vote, then we could use sentiment analysis and some statistic model to train the data, then predict the ratio of next president. And we will visualize our result. 
+
+In my undergraduate data science course, I have done a similar project like this. That project is to analyze Trump's twitter. We used python package like sentiment analysis to analyze the sentiment influence of Trump's tweet. For this project, rather than just focus on the twitter's data, we also can grab more data from several famous news website. We will add more features and will optimize the model to make the model practical to the reality. 
 ### 3. Goal of the project (who are you developing the project for)
-Benefit for shoe&clothes reseller. Moreover, a successful bot also have a great market. We also can make money at the process of resell bots.
+For the parties and the citizen. Parties can know their situation in the competition. They could adjust their strategy according to the data report. For example, in the report we can analyze the news and tweets to calculate currently which demand is the most welcome, and can receive residents' trust. What points that arise residents' dissatisfied in opponent party. etc...
 ### 4. Technology stack:
-HTML, Javascript, Internet Technology, CSS, any coding language for back-end (PYTHON, java)
+For gathering data: Python, twitter API, tweepy , web crawler technology, PHP
+For analysis: statistic model, machine learning model, general numerical and analysis package from python
+also some package to Visualize data
 
 ## Project Idea2:
 ### 1. Project Title:
@@ -21,20 +26,16 @@ Benefit for the coders who are still waiting for their Mr./Mrs. Right
 DB: mongo DB, aws  Front end: JavaFX  Backend: Java
 
 ## Project Idea3:
-### 1.  Project Title:
-Next President Prediction
-### 2.  Project idea description:
-This is a project that used to predict the successful rate---to be elected as the next United State president---for each candidate. The ultimate goal is to predict who is the next president. However, according to the schedule of president vote, we cannot wait until the end of president vote and check the result with the reality. We could built a modle/predict simulator and try our best to make it practice in the reality.
+### 1. Project Title:
+shopping bot(snkrs/supreme)
+### 2. Project idea description:
+2017, in Nike The ten series, there is a shoe which names the ten Chicago. In the resale market, it has resale value that more than 3k USD, however its retail price when it released is only 190 USD.  
 
-We would Gather and analyze tweet data from the topic of president vote, then we could use sentiment analysis and some statistic model to train the data, then predict the ratio of next president. And we will visualize our result. 
-
-In my undergraduate data science course, I have done a similar project like this. That project is to analyze Trump's twitter. We used python package like sentiment analysis to analyze the sentiment influence of Trump's tweet. For this project, rather than just focus on the twitter's data, we also can grab more data from several famous news website. Analyze the news and tweets to recognize currently which president is the most welcome, and can receive residents' trust. We will add more features and make this model more close to the reality in the project process. 
+In this project, we attempt to create a bot that help people successfully buy the hype item which usually sold out in a few seconds after the item released. In the process, we will analyze the frame of website and analyze the process of buying an item. Then we will accelerate the process of buying. For example, automatically add to cart and automatically checkout. The bot should be able to fit every situation, as it is very common in general hype item release that the website is crash and the server gets down. Moreover, we also need to personify bot's movement. For supreme website, it will have a system that detects bot. If add to cart too fast or checkout too fast could be recognize as using bot. The bot also need to recognize the Google Recapcha Checkpoint sign in the webpage and solve the obstacle that prevent Google detecting us as a robot. 
 ### 3. Goal of the project (who are you developing the project for)
-For the parties and the citizen. Parties can know their situation in the competition. They could adjust their strategy according to the data report. For example, which kinds of problem is the most concern in citizen's mind. What points that arise residents' dissatisfied in opponent party. What kinds of words or speech theme could most easily get people trust and get votes. etc...
+Benefit for shoe&clothes reseller. Moreover, a successful bot also have a great market. We also can make money at the process of resell bots. The current most popular bot own at least 3k usd value in the bot market. 
 ### 4. Technology stack:
-For gathering data: Python, twitter API, tweepy , web crawler technology, PHP
-For analysis: statistic model, machine learning model, general numerical and analysis package from python
-also some package to Visualize data
+HTML, Javascript, Internet Technology, CSS, any coding language for back-end (PYTHON, java)
 
 ## Project Idea-4:  
 ### 1、Project Title:  
