@@ -57,11 +57,9 @@ Additionally, if we want to do work on this project, I must get contact with the
 ### 1、Project Title:  
 Smart Home Control System  
 ### 2、Project idea description:  
-When I was an undergraduate, I created a startup and developed the system of smart home. Suppose that there was a virtual steward, who controlled lighting, curtains, TV, air conditioning, and monitoring, etc.   
+When I was an undergraduate, I created a startup and developed the system of smart home. But in the developing process, we found traditional smart home systems were not smart at all. Because traditional smart home companies, like Honeywell Siemens, were only good at embedded system, but didn’t know what AI was, which must be the key in smart home system. We also tried to figure it out, but we failed because we didn’t know machine learning.
 
-On the half way, we found smart home systems were not smart at all because traditional smart home companies, like Honeywell Siemens, were only good at embedded system. They didn’t know what AI was, which must be the key in smart home system. We tried to figure it out, but we failed for we didn’t know machine learning, too.  
-
-Now, AI algorithms for business project are more mature and I’m in Silicon Valley. So I want to try again with the help of Professor Ranjan, to make something that is really smart.  
+But now, AI algorithms for business projects are more mature and I’m in Silicon Valley. So I want to try again with the help of Professor Ranjan, to make the smart home system really smart as if there was a virtual steward, who could controll lighting, curtains, TV, air conditioning, and monitoring for the master.
 
 ### 3、Goal of the project (who are you developing the project for)  
 The main goal for smart home I think should be convenience, comfort and security for people. As an AI system, it should know what the master wants and prepare for him/her. For example, If the master comes to home, it should recognize the identity of the people and open the door and lights for the master if passed. When the master gets to the sofa, TV should be opened and favorite program should be selected. When the master wants to have a sleep in sofa, the system should turn down the light and TV.  
