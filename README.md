@@ -1,4 +1,4 @@
-#ProjectGroup-6
+ProjectGroup-6
 ## Project Idea1:
 ### 1.  Project Title:
 Next President Prediction
@@ -33,7 +33,7 @@ shopping bot(snkrs/supreme)
 
 In this project, we attempt to create a bot that help people successfully buy the hype item which usually sold out in a few seconds after the item released. In the process, we will analyze the frame of website and analyze the process of buying an item. Then we will accelerate the process of buying. For example, automatically add to cart and automatically checkout. The bot should be able to fit every situation, as it is very common in general hype item release that the website is crash and the server gets down. Moreover, we also need to personify bot's movement. For supreme website, it will have a system that detects bot. If add to cart too fast or checkout too fast could be recognize as using bot. The bot also need to recognize the Google Recapcha Checkpoint sign in the webpage and solve the obstacle that prevent Google detecting us as a robot. 
 ### 3. Goal of the project (who are you developing the project for)
-Benefit for shoe&clothes reseller. Moreover, a successful bot also have a great market. We also can make money at the process of resell bots. The current most popular bot own at least 3k usd value in the bot market. 
+Benefit for shoe&clothes reseller. Moreover, a successful bot also have a great market. We also can make money at the process of resell bots. The current most popular bot own at least 3k usd value for a copy in the bot market. 
 ### 4. Technology stack:
 HTML, Javascript, Internet Technology, CSS, any coding language for back-end (PYTHON, java)
 
