@@ -88,7 +88,8 @@ But the previous searching-nodes method only used the two dimensions of the publ
 * The maximum number of load nodes ever uploaded.  
 * Network Type.  
 * Transmission ability of shared resources.  
- The RS can be used to establish the list of recommendation neighbors. The similarity between nodes is calculated at 1-5 items, and the larger the 6-8 items, the better.  
+
+The RS can be used to establish the list of recommendation neighbors. The similarity between nodes is calculated at 1-5 items, and the larger the 6-8 items, the better.  
 ## 3、Goal of the project (who are you developing the project for)  
 The goal of the RS method is to help the tracker assign better quality nodes to every peer, which can not only reduce the cost of servers and bandwith, but also provide more stable live stream data for customers.  
 ## 4、Technology stack:  
