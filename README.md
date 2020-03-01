@@ -28,6 +28,7 @@ DB: mongo DB, aws  Front end: JavaFX  Backend: Java
 ## Project Idea3:
 ### 1. Project Title:
 shopping bot(snkrs/supreme)
+# Approved
 ### 2. Project idea description:
 2017, in Nike The ten series, there is a shoe which names the ten Chicago. In the resale market, it own resale value that more than 3k USD, however its retail price is only 190 USD when it released.  
 
