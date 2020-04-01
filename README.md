@@ -1,4 +1,7 @@
 ProjectGroup-6
+## Architecture
+![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/Architecture.png)
+
 ## Project Idea1:
 ### 1.  Project Title:
 Next President Prediction
