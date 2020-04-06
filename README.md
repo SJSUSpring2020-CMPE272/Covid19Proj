@@ -17,6 +17,8 @@ https://yuanwanmydemo.mybluemix.net/
 ## User Case Scenario
 
 ## Architecture
+-	front end:react.js,boostrap,;diagram will be simpler and more intuitive to show data relation, as for chart showing,we choose echart.js to show our data.
+-	back end:python,node.js,IBM cloud;we will collect plenty of data associated with COVID-19,then choose most suitable model, train our data in IBM Watson machine learning,then provide a API for predicting data.
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/Architecture.png)
 ## Tech Tools
 IBM Cloud Machine Learning  
