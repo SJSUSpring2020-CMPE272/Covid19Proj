@@ -27,6 +27,6 @@ IBM Cloud Data Storage
 - [https://www.politico.com/interactives/2020/coronavirus-testing-by-state-chart-of-new-cases/](https://www.politico.com/interactives/2020/coronavirus-testing-by-state-chart-of-new-cases/)  
 - https://www.kaggle.com/sudalairajkumar/covid19-in-usa  
 - https://covid-19.direct/county/CA/Santa%20Clara  
-- 
+- Air quality historical data: https://aqicn.org/data-platform/register/
 
    
