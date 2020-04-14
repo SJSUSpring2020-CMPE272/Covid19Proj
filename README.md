@@ -10,7 +10,7 @@ https://yuanwanmydemo.mybluemix.net/
 -	We will estanlish a web site to offer the prediction of everywhere we can find enough data. People can select the area which they pay attention to and select the date they care about. For example, as the picture bellow:
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics/SantaClara.png)
 -	This is a screenshot from https://covid-19.direct/county/CA/Santa%20Clara  . We will create a user interface like this. But what is different is that the user can select the date in the future and it will demonstrate the prediction of the future development of COVID19.
-
+-	As for prediction part,user can easily choose the future date,the level of quarantine to predict data
 
 ## Project Statement
 
