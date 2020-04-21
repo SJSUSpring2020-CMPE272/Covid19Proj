@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
-import '../App.css'; 
-import config from '../config/basicConfig'
-import axios from 'axios';
-import qs from 'qs';
+import '../App.css';
 var echarts = require('echarts');
  
  
@@ -140,7 +137,6 @@ class Home extends Component{
         <div class="col-md-12 ">
             {/* {redirectVar} */}
             <div class="cprofile_card img" style = {{'width':'100%'}}>
-            {/* <img style = {{'width':'30%'}} class='img' src={require('../img/corona.jpg')} alt="." ></img> */}
             <div id="states" style={{"width":'100%',"height":"400px"}}></div>
                 <h3 class="center">Search City</h3>
                 <div class = "img">

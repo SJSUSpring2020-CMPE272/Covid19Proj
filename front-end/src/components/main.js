@@ -3,6 +3,7 @@ import {Route} from 'react-router-dom';
 import Navbar from './Nav/Navbar';
 import Home from './home';
 import World from './World'
+import predict from './predict'
  
 
 class Main extends Component {
@@ -13,6 +14,8 @@ class Main extends Component {
                 <Route path="/" component={Navbar}/> 
                 <Route path="/home" component={Home}/> 
                 <Route path="/world" component={World}/> 
+                <Route path="/predict" component={predict}/> 
+                
 
             </div>
         )
