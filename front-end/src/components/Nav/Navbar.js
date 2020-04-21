@@ -17,8 +17,9 @@ class Navbar extends Component {
                     </div> 
                     <ul class="nav navbar-nav navbar-right"> 
                         <li><Link to="/home" class = "glyphicon glyphicon-list-alt">USA</Link></li>
-                        <li><Link to="/" class = "glyphicon glyphicon-map-marker">NearMe</Link></li>
-                      
+                        <li><Link to="/world" class = "glyphicon glyphicon-map-marker">World</Link></li>
+                        <li><Link to="/predict" class = "glyphicon glyphicon-question-sign">Predict</Link></li>
+
                     </ul>
                     
                 </div>

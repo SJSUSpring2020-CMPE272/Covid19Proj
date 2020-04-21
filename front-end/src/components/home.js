@@ -2,16 +2,14 @@ import React, {Component} from 'react';
 import '../App.css'; 
 import config from '../config/basicConfig'
 import axios from 'axios';
-
+import qs from 'qs';
 var echarts = require('echarts');
  
  
 class Home extends Component{
     constructor(props){
         super(props);
-        this.state = { 
-            cityDate:{},
-            allData:{},
+        this.state = {
             cityName:'',
         } 
         this.showCharts = this.showCharts.bind(this)
@@ -20,28 +18,62 @@ class Home extends Component{
     }
 
     componentWillMount(){
-        let getInfoUrl = 'https://covid-19-coronavirus-statistics.p.rapidapi.com/v1/stats';
-
-        // axios.defaults.withCredentials = true;
-        // axios.get(getInfoUrl,{
-        //     headers:{"x-rapidapi-host": "covid-19-coronavirus-statistics.p.rapidapi.com",
-        //     "x-rapidapi-key": "a1d4249599msh3ed4e59db18ea47p1dee78jsnf59fe22051bd"
-        // }
-        // }).then(response => {
-        //     if(response.status === 200){
-        //         console.log('response',response)
-        //     }}
-        // )
+        let getInfoUrl = 'https://coronavirus-map.p.rapidapi.com/v1/spots/month?region="usa"';
  
+        fetch(getInfoUrl,{
+            method: 'get',
+            headers: {
+            'content-type': 'application/json',
+            "x-rapidapi-host": "coronavirus-map.p.rapidapi.com",
+            "x-rapidapi-key": "a1d4249599msh3ed4e59db18ea47p1dee78jsnf59fe22051bd"
+            },
+            }).then(result =>{
+                result.json().then(res => {
+                    console.log('resresresres',res.data)
+                    let data = res.data;
+                    let dataset = [['date', 'total_cases', 'deaths', 'recovered']]
+                    
+                    for(var key in data){ 
+                        let ds = [];
+                        let skey = key.substring(key.length-5)
+                        ds.push(skey);
+                        ds.push(data[key].total_cases);
+                        ds.push(data[key].deaths);
+                        ds.push(data[key].recovered); 
+                        dataset.push(ds);
+                    } 
+                    var myChart = echarts.init(document.getElementById('states'));
+                    var option = {
+                        title: {
+                            text: 'data in the last month'
+                        },
+                        legend: {},
+                        tooltip: {},
+                        dataset: {
+                            source: dataset
+                            
+                        },
+                        xAxis: {type: 'category'},
+                        yAxis: {},
+                        series: [
+                            {type: 'bar'},
+                            {type: 'bar'},
+                            {type: 'bar'}
+                        ]
+                    }; 
+                    myChart.setOption(option);
+
+                })
+                })
     }
  
      showCharts(e){
         e.preventDefault();
         console.log('cityName',this.state.cityName)
-        this.getDataFromApi(this.state.cityName)
-        //console.log('cityDate',cityDate)
-        //let cityDate = this.state.cityDate Santa Clara
-       
+        if(this.state.cityName!= ''){
+            this.getDataFromApi(this.state.cityName)
+        }
+        //San Diego  Santa Clara  San Francisco  Santa Cruz  Los Angeles
     }
 
     cityNameHandler = (e) => {
@@ -65,6 +97,7 @@ class Home extends Component{
                 let data = res.data.covid19Stats;
                 let isSearched = 0;
                 let cityDate = ''
+                console.log('alldata',data)
                 data.map((res)=>{
                             if(res.city == cityName){
                                 console.log('res',res)
@@ -107,8 +140,8 @@ class Home extends Component{
         <div class="col-md-12 ">
             {/* {redirectVar} */}
             <div class="cprofile_card img" style = {{'width':'100%'}}>
-            <img style = {{'width':'30%'}} class='img' src={require('../img/corona.jpg')} alt="." ></img>
-            
+            {/* <img style = {{'width':'30%'}} class='img' src={require('../img/corona.jpg')} alt="." ></img> */}
+            <div id="states" style={{"width":'100%',"height":"400px"}}></div>
                 <h3 class="center">Search City</h3>
                 <div class = "img">
                  <input name="cityName" type="text" class="inputForm" aria-label="..." style = {{'width':'92%'}} onChange = {this.cityNameHandler}>
