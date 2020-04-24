@@ -10,13 +10,16 @@ https://yuanwanmydemo.mybluemix.net/
 -	We will estanlish a web site to offer the prediction of everywhere we can find enough data. People can select the area which they pay attention to and select the date they care about. For example, as the picture bellow:
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics/SantaClara.png)
 -	This is a screenshot from https://covid-19.direct/county/CA/Santa%20Clara  . We will create a user interface like this. But what is different is that the user can select the date in the future and it will demonstrate the prediction of the future development of COVID19.
-
+-	As for prediction part,user can easily choose the future date,the level of quarantine to predict data
 
 ## Project Statement
 
 ## User Case Scenario
 
 ## Architecture
+-	front end:react.js,boostrap,;diagram will be simpler and more intuitive to show data relation, as for chart showing,we choose echart.js to show our data.
+-	back end:python,node.js,IBM cloud;we will collect plenty of data associated with COVID-19,then choose most suitable model, train our data in IBM Watson machine learning,then provide a API for predicting data.
+-  we fetch the latest daily data about covid-19 in every state and the nearest one month in USA from Intnet,then update them in our front page,so users can get the newest information from our application.
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/Architecture.png)
 ## Tech Tools
 IBM Cloud Machine Learning  
@@ -25,6 +28,6 @@ IBM Cloud Data Storage
 - [https://www.politico.com/interactives/2020/coronavirus-testing-by-state-chart-of-new-cases/](https://www.politico.com/interactives/2020/coronavirus-testing-by-state-chart-of-new-cases/)  
 - https://www.kaggle.com/sudalairajkumar/covid19-in-usa  
 - https://covid-19.direct/county/CA/Santa%20Clara  
-- 
+- Air quality historical data: https://aqicn.org/data-platform/register/
 
    
