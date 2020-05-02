@@ -80,7 +80,7 @@ app.get('/predict',function(req,res){
         let another_array_of_values_to_be_scored = array_of_values_to_be_scored
         let payload = { "input_data": [{ "fields": ["date", "state"], "values": [array_of_values_to_be_scored] }] };
         payload = JSON.stringify(payload)
-        const scoring_url = "https://us-south.ml.cloud.ibm.com/v4/deployments/57d5fc94-a067-4a4d-b0fe-19f541da898f/predictions";
+        const scoring_url = "https://us-south.ml.cloud.ibm.com/v4/deployments/d7751b29-a351-4740-8359-6bb7140ac6ec/predictions";
             apiPost(scoring_url, wmlToken, mlInstanceId, payload, function (resp) {
                 let parsedPostResponse;
                 try {
