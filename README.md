@@ -15,10 +15,6 @@ https://yuanwanmydemo.mybluemix.net/
 -   Also, we provide the current situation of COVID19  
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics/map.jpg)
 
-## Project Statement
-
-## User Case Scenario
-
 ## Architecture
  can get the newest information from our application.
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics/architecture.png)
