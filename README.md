@@ -9,7 +9,7 @@ Player A: Dude, I am an American…
 Player B: …  
 
 As we all know that China is the country which implemented quarantine rule and promoted every citizen to wear mask. China was the country which had the most Covid-19 case, however, right now China had already controlled the spreading of Covid-19 and restart people’s work and resume cities’ daily operation.  
-![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics_bon/COVIDNations.jpg)  
+![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics_bon/COVIDNations.png)  
 So, here are two questions: is wearing mask helpful for us to prevent from getting the Covid-19 Virus? And does quarantine work for control or reduce the Covid-19 positive increase case for a country?  
 ##
 I track back some news about quarantine rule and government recommended citizens to wear mask as necessary.  
