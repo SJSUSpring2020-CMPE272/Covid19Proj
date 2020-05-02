@@ -13,6 +13,7 @@ class Home extends Component {
         this.showCharts = this.showCharts.bind(this)
         this.cityNameHandler = this.cityNameHandler.bind(this)
         this.getDataFromApi = this.getDataFromApi.bind(this)
+        this.barChart = this.barChart.bind(this)
     }
 
     componentWillMount() {
@@ -55,9 +56,9 @@ class Home extends Component {
                     xAxis: { type: 'category' },
                     yAxis: {},
                     series: [
-                        { type: this.state.chartType },
-                        { type: this.state.chartType },
-                        { type: this.state.chartType }
+                        { type: 'line' },
+                        { type: 'line' },
+                        { type: 'line' }
                     ]
                 };
                 myChart.setOption(option);
@@ -134,7 +135,72 @@ class Home extends Component {
                 }
             })
         })
-    } 
+    }
+    switch(){
+        if(this.state.chartType == 'line'){
+            this.barChart()
+            this.setState({
+                chartType:'bar'
+            })
+        }else{
+            this.componentWillMount()
+            this.setState({
+                chartType:'line'
+            })
+        }
+        console.log('this.state.chartType',this.state.chartType)
+    }
+    barChart(){
+        let getInfoUrl = 'https://coronavirus-map.p.rapidapi.com/v1/spots/month?region="usa"';
+
+        fetch(getInfoUrl, {
+            method: 'get',
+            headers: {
+                'content-type': 'application/json',
+                "x-rapidapi-host": "coronavirus-map.p.rapidapi.com",
+                "x-rapidapi-key": "a1d4249599msh3ed4e59db18ea47p1dee78jsnf59fe22051bd"
+            },
+        }).then(result => {
+            result.json().then(res => {
+                console.log('resresresres', res.data)
+                let data = res.data;
+                let dataset = [['date', 'total_cases', 'deaths', 'recovered']]
+
+                for (var key in data) {
+                    let ds = [];
+                    let skey = key.substring(key.length - 5)
+                    ds.push(skey);
+                    ds.push(data[key].total_cases);
+                    ds.push(data[key].deaths);
+                    ds.push(data[key].recovered);
+                    dataset.push(ds);
+                }
+                dataset.reverse()
+                dataset.unshift(['date', 'total_cases', 'deaths', 'recovered'])
+                var myChart = echarts.init(document.getElementById('states'));
+                var option = {
+                    title: {
+                        text: 'data in the last month'
+                    },
+                    legend: {},
+                    tooltip: {},
+                    dataset: {
+                        source: dataset
+                    },
+                    xAxis: { type: 'category' },
+                    yAxis: {},
+                    series: [
+                        { type: 'bar' },
+                        { type: 'bar' },
+                        { type: 'bar' }
+                    ]
+                };
+                myChart.setOption(option);
+
+            })
+        })
+    }
+
     render() {
 
         return (
@@ -142,7 +208,10 @@ class Home extends Component {
                 <div class="col-md-12 ">
                     {/* {redirectVar} */}
                     
-                    <div class="cprofile_card img" style={{ 'width': '100%' }}> 
+                    <div class="cprofile_card img" style={{ 'width': '100%' }}>
+                    <div class='img' style={{ 'width': '5%'}}>
+                            <button onClick ={this.switch.bind(this)}>switch</button>
+                        </div>
                         <div id="states" style={{ "width": '100%', "height": "400px" }}>
                             <div class='img'>
                                 <div align="center">
