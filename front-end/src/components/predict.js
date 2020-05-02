@@ -6,9 +6,9 @@ import states from '../../src/config/state'
 import fs from 'fs'
 
 let host = config.host;
-let port = config.front_end_port;
+let port = config.back_end_port;
 let url = host + ':' + port;
-
+let url2 = host + ':' + 3000;
 
 //Define a Login Component
 class Predict extends Component {
@@ -120,7 +120,7 @@ class Predict extends Component {
                             </div>
                             <br></br>
                             <div>
-                            <p >want more information? <a href={url + '/report'} class="navbar-link">click me</a></p>
+                            <p >want more information? <a href={url2 + '/report'} class="navbar-link">click me</a></p>
                     
                             </div>
                         </div>
