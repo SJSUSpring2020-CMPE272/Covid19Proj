@@ -17,7 +17,7 @@ iam_token = res["access_token"]
 
 #user create 
 ml_instance_id = "ed418535-f5e3-4015-8ad6-7927873e01f0"
-array_of_values_to_be_scored = [20200410,'CA']
+array_of_values_to_be_scored = [20200425,'NY']
 another_array_of_values_to_be_scored = array_of_values_to_be_scored
 
 import urllib3, requests, json
@@ -29,7 +29,7 @@ header = {'Content-Type': 'application/json', 'Authorization': 'Bearer ' + iam_t
 # NOTE: manually define and pass the array(s) of values to be scored in the next line
 payload_scoring = {"input_data": [{"fields": ["date", "state"], "values": [array_of_values_to_be_scored, another_array_of_values_to_be_scored]}]}
 
-response_scoring = requests.post('https://us-south.ml.cloud.ibm.com/v4/deployments/57d5fc94-a067-4a4d-b0fe-19f541da898f/predictions', json=payload_scoring, headers=header)
+response_scoring = requests.post('https://us-south.ml.cloud.ibm.com/v4/deployments/d7751b29-a351-4740-8359-6bb7140ac6ec/predictions', json=payload_scoring, headers=header)
 
 print("Scoring response")
 print(json.loads(response_scoring.text))
