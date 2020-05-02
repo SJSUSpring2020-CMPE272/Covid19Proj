@@ -3,9 +3,10 @@ import '../App.css';
 import axios from 'axios';
 import config from '../config/basicConfig'
 import states from '../../src/config/state'
+import fs from 'fs'
 
 let host = config.host;
-let port = config.back_end_port;
+let port = config.front_end_port;
 let url = host + ':' + port;
 
 
@@ -21,7 +22,15 @@ class Predict extends Component {
         }
     }
     componentWillMount() {
+        axios.defaults.withCredentials = true;
+        axios.get(url + '/getTxtData').then(response => {
+            if (response.status === 200) { 
+                let data = response.data 
+                console.log('data', data) 
+            } else {
 
+            }
+        })
     }
 
 
@@ -108,6 +117,11 @@ class Predict extends Component {
                             <div>
                                 <br></br>
                                 <h4>{this.state.message}</h4>
+                            </div>
+                            <br></br>
+                            <div>
+                            <p >want more information? <a href={url + '/report'} class="navbar-link">click me</a></p>
+                    
                             </div>
                         </div>
 

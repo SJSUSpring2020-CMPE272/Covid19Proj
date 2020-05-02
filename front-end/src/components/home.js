@@ -38,7 +38,9 @@ class Home extends Component{
                         ds.push(data[key].deaths);
                         ds.push(data[key].recovered); 
                         dataset.push(ds);
-                    } 
+                    }  
+                    dataset.reverse()
+                    dataset.unshift(['date', 'total_cases', 'deaths', 'recovered'])
                     var myChart = echarts.init(document.getElementById('states'));
                     var option = {
                         title: {
@@ -48,14 +50,13 @@ class Home extends Component{
                         tooltip: {},
                         dataset: {
                             source: dataset
-                            
                         },
                         xAxis: {type: 'category'},
                         yAxis: {},
                         series: [
-                            {type: 'bar'},
-                            {type: 'bar'},
-                            {type: 'bar'}
+                            {type: 'line'},
+                            {type: 'line'},
+                            {type: 'line'}
                         ]
                     }; 
                     myChart.setOption(option);
@@ -110,18 +111,22 @@ class Home extends Component{
                         title: {
                             text: cityDate.keyId+cityDate.lastUpdate
                         },
-                        tooltip: {},
-                        legend: {
-                            data:['销量']
-                        },
-                        xAxis: {
-                            data: ["confirmed","deaths","recovered"]
-                        },
-                        yAxis: {},
+                        // tooltip: {},
+                        // legend: {
+                        //     data:['销量']
+                        // },
+                        // xAxis: {
+                        //     //data: ["confirmed","deaths","recovered"]
+                        // },
+                        // yAxis: {},
                         series: [{
                             name: 'number',
-                            type: 'bar',
-                            data: [cityDate.confirmed, cityDate.deaths, cityDate.recovered]
+                            //radius: '55%',
+                            type: 'pie',
+                            //roseType: 'angle',
+                            data: [{value:cityDate.confirmed, name:'confirmed: '+cityDate.confirmed},
+                            {value:cityDate.deaths,  name:'deaths: '+cityDate.deaths},
+                            {value:cityDate.recovered,  name:'recovered: '+ cityDate.recovered} ]
                         }]
                     }; 
                     myChart.setOption(option);

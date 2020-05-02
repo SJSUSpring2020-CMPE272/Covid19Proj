@@ -19,6 +19,7 @@ class Navbar extends Component {
                         <li><Link to="/home" class = "glyphicon glyphicon-list-alt">USA</Link></li>
                         <li><Link to="/world" class = "glyphicon glyphicon-map-marker">World</Link></li>
                         <li><Link to="/predict" class = "glyphicon glyphicon-question-sign">Predict</Link></li>
+                        {/* <li><Link to="/report" class = "glyphicon glyphicon-list-alt">Report</Link></li> */}
 
                     </ul>
                     
