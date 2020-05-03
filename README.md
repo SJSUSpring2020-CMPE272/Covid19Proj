@@ -89,6 +89,7 @@ https://yuanwanmydemo.mybluemix.net/
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics/map.jpg)
 
 ## Architecture
+![Image-text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/Architecture%20diagram.png)
  can get the newest information from our application.
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics/architecture.png)
 -	Data Set: We collect data from kaggle and github. The data source link is at the end of this file.
