@@ -209,8 +209,8 @@ class Home extends Component {
                     {/* {redirectVar} */}
                     
                     <div class="cprofile_card img" style={{ 'width': '100%' }}>
-                    <div class='img' style={{ 'width': '5%'}}>
-                            <button onClick ={this.switch.bind(this)}>switch</button>
+                    <div class='img' style={{ 'width': '1%'}}>
+                            <button type="button" class = " glyphicon glyphicon-retweet " onClick ={this.switch.bind(this)}> </button>
                         </div>
                         <div id="states" style={{ "width": '100%', "height": "400px" }}>
                             <div class='img'>

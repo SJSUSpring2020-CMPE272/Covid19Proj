@@ -98,17 +98,18 @@ app.get('/predict',function(req,res){
 })
 
 app.get('/getTxtData',function(req,res){
-
-    // jsexecpy.run_ipynb_code("./config/272italy.ipynb",({data,pythonpath},otherargs = 11)=>{
-    //     console.log('data',data)
-    //     console.log('pythonpath',pythonpath)
-    //     console.log('otherargs',otherargs) 
-    // })
-    // fs.readFile('./config/1.txt', 'utf8', function(err, data){
-    //     // let x = data.split('\n')
-    //     // console.log(x);  
-    //     // res.end(data)
-    // });
+ 
+    fs.readFile('./config/file1.txt', 'utf8', function(err, data){
+        let x = data.split('\n') 
+        fs.readFile('./config/file2.txt', 'utf8', function(err1, data1){
+            let y = data1.split('\n') 
+            let returnData = {
+                file1:x,
+                file2:y
+            }
+            res.json(returnData)
+        }) 
+    });
 })
 
 app.listen(3001, function () {
