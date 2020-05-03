@@ -111,7 +111,7 @@ class Report extends Component {
         })
     }
     next(page) {
-        if(this.state.page+1 == 10){
+        if(this.state.page+1 == 12){
             alert('this is last page')
         }
         else{
