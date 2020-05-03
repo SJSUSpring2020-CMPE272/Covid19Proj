@@ -99,8 +99,8 @@ https://yuanwanmydemo.mybluemix.net/
 ## Tech Tools
 IBM Cloud Machine Learning  
 IBM Cloud Data Storage
-React 
-Vue
+AWS
+ReactJS
 NodeJS
 Python
 
