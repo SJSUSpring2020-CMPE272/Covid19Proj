@@ -1,3 +1,4 @@
+var fs = require('fs')
 //import express module 
 var express = require('express');
 //create  an express app
@@ -9,6 +10,8 @@ var session = require('express-session');
 let cors = require("cors"); //  npm install cors
 var config = require('./config/basicConfig');
 var cookieParser = require('cookie-parser');
+let jsexecpy = require("jsexecpy")
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -46,7 +49,7 @@ var request = require('request');
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const wml_credentials = new Map();
 //var apikey = "y1wTyLwd-0IE6PriwT3_s0cmqZmVqw2FCP5DgSU7_lw1";
-var apikey = "QVrODgZjynDOQk2l725gTGuHD9kI4dq22ayypoVLyLcM";
+var apikey = "ak771J-5kx03A4zH-0zjUK60g-BbkKD5HU7o3HzIvF1r";
 
 var IBM_Cloud_IAM_uid = "bx";
 var IBM_Cloud_IAM_pwd = "bx"; 
@@ -67,7 +70,7 @@ app.get('/predict',function(req,res){
         console.log('bodybodybody', body)
         var iam_token = JSON.parse(body)["access_token"];
         const wmlToken = "Bearer " + iam_token;
-        const mlInstanceId = '1c9b19f1-1840-482d-8de3-6dd578d91041';
+        const mlInstanceId = 'ed418535-f5e3-4015-8ad6-7927873e01f0';
         date = Number(date)
         let array_of_values_to_be_scored = [date,state]
         console.log('array_of_values_to_be_scored',array_of_values_to_be_scored)
@@ -77,7 +80,7 @@ app.get('/predict',function(req,res){
         let another_array_of_values_to_be_scored = array_of_values_to_be_scored
         let payload = { "input_data": [{ "fields": ["date", "state"], "values": [array_of_values_to_be_scored] }] };
         payload = JSON.stringify(payload)
-        const scoring_url = "https://us-south.ml.cloud.ibm.com/v4/deployments/f776e793-d90d-4a09-a34c-3d18be69eeeb/predictions";
+        const scoring_url = "https://us-south.ml.cloud.ibm.com/v4/deployments/d7751b29-a351-4740-8359-6bb7140ac6ec/predictions";
             apiPost(scoring_url, wmlToken, mlInstanceId, payload, function (resp) {
                 let parsedPostResponse;
                 try {
@@ -93,7 +96,21 @@ app.get('/predict',function(req,res){
             });
     })
 })
+
+app.get('/getTxtData',function(req,res){
  
+    fs.readFile('./config/file1.txt', 'utf8', function(err, data){
+        let x = data.split('\n') 
+        fs.readFile('./config/file2.txt', 'utf8', function(err1, data1){
+            let y = data1.split('\n') 
+            let returnData = {
+                file1:x,
+                file2:y
+            }
+            res.json(returnData)
+        }) 
+    });
+})
 
 app.listen(3001, function () {
     console.log("Server listening on port 3001");

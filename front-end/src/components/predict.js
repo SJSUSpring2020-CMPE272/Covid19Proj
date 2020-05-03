@@ -3,11 +3,13 @@ import '../App.css';
 import axios from 'axios';
 import config from '../config/basicConfig'
 import states from '../../src/config/state'
+import fs from 'fs'
+var echarts = require('echarts');
 
 let host = config.host;
 let port = config.back_end_port;
 let url = host + ':' + port;
-
+let url2 = host + ':' + 3000;
 
 //Define a Login Component
 class Predict extends Component {
@@ -18,13 +20,21 @@ class Predict extends Component {
         //const mes = props.location.state
         this.state = {
             message: ''
-        }
+        } 
     }
     componentWillMount() {
+        axios.defaults.withCredentials = true;
+        axios.get(url + '/getTxtData').then(response => {
+            if (response.status === 200) { 
+                let data = response.data 
+                console.log('data', data) 
+            } else {
 
+            }
+        })
     }
-
-
+ 
+ 
     //submit Login handler to send a request to the node backend
     submitLogin = (e) => {
         //prevent page from refresh
@@ -90,29 +100,25 @@ class Predict extends Component {
                                     </div>
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="date" placeholder="Date" />
-                                    </div>
-                                    {/* <h4> the level of lockdown</h4>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="role" value="customer" /> low
-                            </label>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="role" value="seller" /> medium
-                            </label>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="role" value="admin" /> high
-                            </label> */}
-
+                                    </div>  
                                     <button class="button">Predict</button>
                                 </form>
                             </div>
-                            <div>
-                                <br></br>
+                            <div> 
                                 <h4>{this.state.message}</h4>
                             </div>
+                            <br></br>
+                            <div>
+                            <p >want our detailed analysis? <a href={url2 + '/report'} class="navbar-link">click me</a> 
+                            </p>
+                    
+                            </div>  
                         </div>
-
+                        
+                    </div> 
+                    
                     </div>
-                </div>
+                
             </div>
         )
     }

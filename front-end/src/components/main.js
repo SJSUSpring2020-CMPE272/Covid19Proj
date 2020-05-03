@@ -4,6 +4,7 @@ import Navbar from './Nav/Navbar';
 import Home from './home';
 import World from './World'
 import predict from './predict'
+import report from './report'
  
 
 class Main extends Component {
@@ -15,6 +16,7 @@ class Main extends Component {
                 <Route path="/home" component={Home}/> 
                 <Route path="/world" component={World}/> 
                 <Route path="/predict" component={predict}/> 
+                <Route path="/report" component={report}/> 
                 
 
             </div>
