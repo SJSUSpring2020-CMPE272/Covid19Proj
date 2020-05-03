@@ -97,12 +97,12 @@ https://yuanwanmydemo.mybluemix.net/
 -  we fetch the latest daily data about covid-19 in every state and the nearest one month in USA from Intnet,then update them in our front page,so users
 -  
 ## Tech Tools
-IBM Cloud Machine Learning  
-IBM Cloud Data Storage
-AWS
-ReactJS
-NodeJS
-Python
+ - IBM Cloud Machine Learning  
+ - IBM Cloud Data Storage
+ - AWS
+ - ReactJS
+ - NodeJS
+ - Python
 
 ## Data Source
 - [https://www.politico.com/interactives/2020/coronavirus-testing-by-state-chart-of-new-cases/](https://www.politico.com/interactives/2020/coronavirus-testing-by-state-chart-of-new-cases/)  
