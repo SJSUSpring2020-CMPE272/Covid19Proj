@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 var echarts = require('echarts');
+var unirest = require("unirest");
 
 
 class Home extends Component {
@@ -8,7 +9,7 @@ class Home extends Component {
         super(props);
         this.state = {
             cityName: '',
-            chartType:'line'
+            chartType: 'line'
         }
         this.showCharts = this.showCharts.bind(this)
         this.cityNameHandler = this.cityNameHandler.bind(this)
@@ -16,37 +17,94 @@ class Home extends Component {
         this.barChart = this.barChart.bind(this)
     }
 
-    componentWillMount() {
-        let getInfoUrl = 'https://coronavirus-map.p.rapidapi.com/v1/spots/month?region="usa"';
+    async componentWillMount() {
+        // let getInfoUrl = 'https://coronavirus-map.p.rapidapi.com/v1/spots/month?region="usa"';
 
-        fetch(getInfoUrl, {
-            method: 'get',
-            headers: {
-                'content-type': 'application/json',
-                "x-rapidapi-host": "coronavirus-map.p.rapidapi.com",
-                "x-rapidapi-key": "a1d4249599msh3ed4e59db18ea47p1dee78jsnf59fe22051bd"
-            },
-        }).then(result => {
-            result.json().then(res => {
-                console.log('resresresres', res.data)
-                let data = res.data;
-                let dataset = [['date', 'total_cases', 'deaths', 'recovered']]
+        // fetch(getInfoUrl, {
+        //     method: 'get',
+        //     headers: {
+        //         'content-type': 'application/json',
+        //         "x-rapidapi-host": "coronavirus-map.p.rapidapi.com",
+        //         "x-rapidapi-key": "a1d4249599msh3ed4e59db18ea47p1dee78jsnf59fe22051bd"
+        //     },
+        // }).then(result => {
+        //     result.json().then(res => {
+        //         console.log('resresresres', res.data)
+        //         let data = res.data;
+        //         let dataset = [['date', 'total_cases', 'deaths', 'recovered']]
 
-                for (var key in data) {
-                    let ds = [];
-                    let skey = key.substring(key.length - 5)
-                    ds.push(skey);
-                    ds.push(data[key].total_cases);
-                    ds.push(data[key].deaths);
-                    ds.push(data[key].recovered);
-                    dataset.push(ds);
-                }
-                dataset.reverse()
-                dataset.unshift(['date', 'total_cases', 'deaths', 'recovered'])
+        //         for (var key in data) {
+        //             let ds = [];
+        //             let skey = key.substring(key.length - 5)
+        //             ds.push(skey);
+        //             ds.push(data[key].total_cases);
+        //             ds.push(data[key].deaths);
+        //             ds.push(data[key].recovered);
+        //             dataset.push(ds);
+        //         }
+        //         dataset.reverse()
+        //         dataset.unshift(['date', 'total_cases', 'deaths', 'recovered'])
+        //         var myChart = echarts.init(document.getElementById('states'));
+        //         var option = {
+        //             title: {
+        //                 text: 'data in the last month'
+        //             },
+        //             legend: {},
+        //             tooltip: {},
+        //             dataset: {
+        //                 source: dataset
+        //             },
+        //             xAxis: { type: 'category' },
+        //             yAxis: {},
+        //             series: [
+        //                 { type: 'line' },
+        //                 { type: 'line' },
+        //                 { type: 'line' }
+        //             ]
+        //         };
+        //         myChart.setOption(option);
+
+        //     })
+        // }) 
+        var req = unirest("GET", "https://covid-193.p.rapidapi.com/history");
+
+        let dataset = [['time', 'total_cases', 'deaths', 'recovered', 'new_case']]
+        req.query({
+            "day": "2020-05-03",
+            "country": "usa"
+        });
+        req.headers({
+            "x-rapidapi-host": "covid-193.p.rapidapi.com",
+            "x-rapidapi-key": "a1d4249599msh3ed4e59db18ea47p1dee78jsnf59fe22051bd"
+        });
+        req.end(function (res) {
+            if (res.error) throw new Error(res.error);
+            let data = res.body.response;
+            console.log(data)
+            data.map((d) => {
+                let line = []
+
+                let time = d.time
+                time = new Date(time)
+                let hour = time.getUTCHours();
+                let min = time.getMinutes();
+                time = hour + ': ' + min 
+                line.push(time)
+                line.push(d.cases.total)
+                line.push(d.deaths.total)
+                line.push(d.cases.recovered)
+                //line.push(d.tests.total)
+                line.push(d.cases.new)
+                console.log(line)
+                dataset.push(line) 
+            })
+            dataset.reverse()
+            dataset.unshift(['time', 'total_cases', 'deaths', 'recovered', 'new_case']) 
+ 
                 var myChart = echarts.init(document.getElementById('states'));
                 var option = {
                     title: {
-                        text: 'data in the last month'
+                        text: 'data in today'
                     },
                     legend: {},
                     tooltip: {},
@@ -58,13 +116,12 @@ class Home extends Component {
                     series: [
                         { type: 'line' },
                         { type: 'line' },
+                        { type: 'line' },
                         { type: 'line' }
                     ]
                 };
                 myChart.setOption(option);
-
             })
-        })
     }
 
     showCharts(e) {
@@ -111,7 +168,8 @@ class Home extends Component {
                     var myChart = echarts.init(document.getElementById('main'));
                     var option = {
                         title: {
-                            text: cityDate.keyId + cityDate.lastUpdate
+                            text: cityDate.keyId
+                            // + cityDate.lastUpdate
                         },
                         // tooltip: {},
                         // legend: {
@@ -136,51 +194,108 @@ class Home extends Component {
             })
         })
     }
-    switch(){
-        if(this.state.chartType == 'line'){
+    switch() {
+        if (this.state.chartType == 'line') {
             this.barChart()
             this.setState({
-                chartType:'bar'
+                chartType: 'bar'
             })
-        }else{
+        } else {
             this.componentWillMount()
             this.setState({
-                chartType:'line'
+                chartType: 'line'
             })
         }
-        console.log('this.state.chartType',this.state.chartType)
+        console.log('this.state.chartType', this.state.chartType)
     }
-    barChart(){
-        let getInfoUrl = 'https://coronavirus-map.p.rapidapi.com/v1/spots/month?region="usa"';
+    barChart() {
+        // let getInfoUrl = 'https://coronavirus-map.p.rapidapi.com/v1/spots/month?region="usa"';
 
-        fetch(getInfoUrl, {
-            method: 'get',
-            headers: {
-                'content-type': 'application/json',
-                "x-rapidapi-host": "coronavirus-map.p.rapidapi.com",
-                "x-rapidapi-key": "a1d4249599msh3ed4e59db18ea47p1dee78jsnf59fe22051bd"
-            },
-        }).then(result => {
-            result.json().then(res => {
-                console.log('resresresres', res.data)
-                let data = res.data;
-                let dataset = [['date', 'total_cases', 'deaths', 'recovered']]
+        // fetch(getInfoUrl, {
+        //     method: 'get',
+        //     headers: {
+        //         'content-type': 'application/json',
+        //         "x-rapidapi-host": "coronavirus-map.p.rapidapi.com",
+        //         "x-rapidapi-key": "a1d4249599msh3ed4e59db18ea47p1dee78jsnf59fe22051bd"
+        //     },
+        // }).then(result => {
+            // result.json().then(res => {
+            //     console.log('resresresres', res.data)
+            //     let data = res.data;
+            //     let dataset = [['date', 'total_cases', 'deaths', 'recovered']]
 
-                for (var key in data) {
-                    let ds = [];
-                    let skey = key.substring(key.length - 5)
-                    ds.push(skey);
-                    ds.push(data[key].total_cases);
-                    ds.push(data[key].deaths);
-                    ds.push(data[key].recovered);
-                    dataset.push(ds);
-                }
-                dataset.reverse()
-                dataset.unshift(['date', 'total_cases', 'deaths', 'recovered'])
+            //     for (var key in data) {
+            //         let ds = [];
+            //         let skey = key.substring(key.length - 5)
+            //         ds.push(skey);
+            //         ds.push(data[key].total_cases);
+            //         ds.push(data[key].deaths);
+            //         ds.push(data[key].recovered);
+            //         dataset.push(ds);
+            //     }
+                // dataset.reverse()
+                // dataset.unshift(['date', 'total_cases', 'deaths', 'recovered'])
+                // var myChart = echarts.init(document.getElementById('states'));
+                // var option = {
+                //     title: {
+                //         text: 'data in the last month'
+                //     },
+                //     legend: {},
+                //     tooltip: {},
+                //     dataset: {
+                //         source: dataset
+                //     },
+                //     xAxis: { type: 'category' },
+                //     yAxis: {},
+            //         series: [
+            //             { type: 'bar' },
+            //             { type: 'bar' },
+            //             { type: 'bar' }
+            //         ]
+            //     };
+            //     myChart.setOption(option);
+
+            // })
+        //})
+        var req = unirest("GET", "https://covid-193.p.rapidapi.com/history");
+
+        let dataset = [['time', 'total_cases', 'deaths', 'recovered', 'new_case']]
+        req.query({
+            "day": "2020-05-03",
+            "country": "usa"
+        });
+        req.headers({
+            "x-rapidapi-host": "covid-193.p.rapidapi.com",
+            "x-rapidapi-key": "a1d4249599msh3ed4e59db18ea47p1dee78jsnf59fe22051bd"
+        });
+        req.end(function (res) {
+            if (res.error) throw new Error(res.error);
+            let data = res.body.response;
+            console.log(data)
+            data.map((d) => {
+                let line = []
+
+                let time = d.time
+                time = new Date(time)
+                let hour = time.getUTCHours();
+                let min = time.getMinutes();
+                time = hour + ': ' + min 
+                line.push(time)
+                line.push(d.cases.total)
+                line.push(d.deaths.total)
+                line.push(d.cases.recovered)
+                //line.push(d.tests.total)
+                line.push(d.cases.new)
+                console.log(line)
+                dataset.push(line) 
+            })
+            dataset.reverse()
+            dataset.unshift(['time', 'total_cases', 'deaths', 'recovered', 'new_case']) 
+ 
                 var myChart = echarts.init(document.getElementById('states'));
                 var option = {
                     title: {
-                        text: 'data in the last month'
+                        text: 'data in today'
                     },
                     legend: {},
                     tooltip: {},
@@ -192,13 +307,12 @@ class Home extends Component {
                     series: [
                         { type: 'bar' },
                         { type: 'bar' },
+                        { type: 'bar' },
                         { type: 'bar' }
                     ]
                 };
                 myChart.setOption(option);
-
             })
-        })
     }
 
     render() {
@@ -207,20 +321,20 @@ class Home extends Component {
             <div>
                 <div class="col-md-12 ">
                     {/* {redirectVar} */}
-                    
+
                     <div class="cprofile_card img" style={{ 'width': '100%' }}>
-                    <div class='img' style={{ 'width': '1%'}}>
-                            <button type="button" class = " glyphicon glyphicon-retweet " onClick ={this.switch.bind(this)}> </button>
+                        <div class='img' style={{ 'width': '1%' }}>
+                            <button type="button" class=" glyphicon glyphicon-retweet " onClick={this.switch.bind(this)}> </button>
                         </div>
                         <div id="states" style={{ "width": '100%', "height": "400px" }}>
                             <div class='img'>
                                 <div align="center">
-                                    <img style={{ 'width': '90%',"height": "350px" }} class='img' src={require('../img/time.gif')} alt="." ></img>
+                                    <img style={{ 'width': '90%', "height": "350px" }} class='img' src={require('../img/time.gif')} alt="." ></img>
                                 </div>
                             </div>
 
                         </div>
-                        
+
                         <h3 class="center">Search City</h3>
                         <div class="img">
                             <input name="cityName" type="text" class="inputForm" aria-label="..." style={{ 'width': '92%' }} onChange={this.cityNameHandler}>
