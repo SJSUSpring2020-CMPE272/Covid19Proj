@@ -70,7 +70,7 @@ class Home extends Component {
 
         let dataset = [['time', 'total_cases', 'deaths', 'recovered', 'new_case']]
         req.query({
-            "day": "2020-05-03",
+            "day": "2020-05-03",//"2020-05-04"
             "country": "usa"
         });
         req.headers({
