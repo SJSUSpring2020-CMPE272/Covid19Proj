@@ -18,54 +18,54 @@ class Home extends Component {
     }
 
     async componentWillMount() {
-        // let getInfoUrl = 'https://coronavirus-map.p.rapidapi.com/v1/spots/month?region="usa"';
+        let getInfoUrl = 'https://coronavirus-map.p.rapidapi.com/v1/spots/month?region="usa"';
 
-        // fetch(getInfoUrl, {
-        //     method: 'get',
-        //     headers: {
-        //         'content-type': 'application/json',
-        //         "x-rapidapi-host": "coronavirus-map.p.rapidapi.com",
-        //         "x-rapidapi-key": "a1d4249599msh3ed4e59db18ea47p1dee78jsnf59fe22051bd"
-        //     },
-        // }).then(result => {
-        //     result.json().then(res => {
-        //         console.log('resresresres', res.data)
-        //         let data = res.data;
-        //         let dataset = [['date', 'total_cases', 'deaths', 'recovered']]
+        fetch(getInfoUrl, {
+            method: 'get',
+            headers: {
+                'content-type': 'application/json',
+                "x-rapidapi-host": "coronavirus-map.p.rapidapi.com",
+                "x-rapidapi-key": "a1d4249599msh3ed4e59db18ea47p1dee78jsnf59fe22051bd"
+            },
+        }).then(result => {
+            result.json().then(res => {
+                console.log('resresresres', res.data)
+                let data = res.data;
+                let dataset = [['date', 'total_cases', 'deaths', 'recovered']]
 
-        //         for (var key in data) {
-        //             let ds = [];
-        //             let skey = key.substring(key.length - 5)
-        //             ds.push(skey);
-        //             ds.push(data[key].total_cases);
-        //             ds.push(data[key].deaths);
-        //             ds.push(data[key].recovered);
-        //             dataset.push(ds);
-        //         }
-        //         dataset.reverse()
-        //         dataset.unshift(['date', 'total_cases', 'deaths', 'recovered'])
-        //         var myChart = echarts.init(document.getElementById('states'));
-        //         var option = {
-        //             title: {
-        //                 text: 'data in the last month'
-        //             },
-        //             legend: {},
-        //             tooltip: {},
-        //             dataset: {
-        //                 source: dataset
-        //             },
-        //             xAxis: { type: 'category' },
-        //             yAxis: {},
-        //             series: [
-        //                 { type: 'line' },
-        //                 { type: 'line' },
-        //                 { type: 'line' }
-        //             ]
-        //         };
-        //         myChart.setOption(option);
+                for (var key in data) {
+                    let ds = [];
+                    let skey = key.substring(key.length - 5)
+                    ds.push(skey);
+                    ds.push(data[key].total_cases);
+                    ds.push(data[key].deaths);
+                    ds.push(data[key].recovered);
+                    dataset.push(ds);
+                }
+                dataset.reverse()
+                dataset.unshift(['date', 'total_cases', 'deaths', 'recovered'])
+                var myChart = echarts.init(document.getElementById('states'));
+                var option = {
+                    title: {
+                        text: 'data in the last month'
+                    },
+                    legend: {},
+                    tooltip: {},
+                    dataset: {
+                        source: dataset
+                    },
+                    xAxis: { type: 'category' },
+                    yAxis: {},
+                    series: [
+                        { type: 'line' },
+                        { type: 'line' },
+                        { type: 'line' }
+                    ]
+                };
+                myChart.setOption(option);
 
-        //     })
-        // }) 
+            })
+        }) 
         var req = unirest("GET", "https://covid-193.p.rapidapi.com/history");
 
         let dataset = [['time', 'total_cases', 'deaths', 'recovered', 'new_case']]
@@ -94,14 +94,13 @@ class Home extends Component {
                 line.push(d.deaths.total)
                 line.push(d.cases.recovered)
                 //line.push(d.tests.total)
-                line.push(d.cases.new)
-                console.log(line)
+                line.push(d.cases.new) 
                 dataset.push(line) 
             })
             dataset.reverse()
             dataset.unshift(['time', 'total_cases', 'deaths', 'recovered', 'new_case']) 
  
-                var myChart = echarts.init(document.getElementById('states'));
+                var myChart = echarts.init(document.getElementById('states2'));
                 var option = {
                     title: {
                         text: 'data in today'
@@ -209,54 +208,54 @@ class Home extends Component {
         console.log('this.state.chartType', this.state.chartType)
     }
     barChart() {
-        // let getInfoUrl = 'https://coronavirus-map.p.rapidapi.com/v1/spots/month?region="usa"';
+        let getInfoUrl = 'https://coronavirus-map.p.rapidapi.com/v1/spots/month?region="usa"';
 
-        // fetch(getInfoUrl, {
-        //     method: 'get',
-        //     headers: {
-        //         'content-type': 'application/json',
-        //         "x-rapidapi-host": "coronavirus-map.p.rapidapi.com",
-        //         "x-rapidapi-key": "a1d4249599msh3ed4e59db18ea47p1dee78jsnf59fe22051bd"
-        //     },
-        // }).then(result => {
-            // result.json().then(res => {
-            //     console.log('resresresres', res.data)
-            //     let data = res.data;
-            //     let dataset = [['date', 'total_cases', 'deaths', 'recovered']]
+        fetch(getInfoUrl, {
+            method: 'get',
+            headers: {
+                'content-type': 'application/json',
+                "x-rapidapi-host": "coronavirus-map.p.rapidapi.com",
+                "x-rapidapi-key": "a1d4249599msh3ed4e59db18ea47p1dee78jsnf59fe22051bd"
+            },
+        }).then(result => {
+            result.json().then(res => {
+                console.log('resresresres', res.data)
+                let data = res.data;
+                let dataset = [['date', 'total_cases', 'deaths', 'recovered']]
 
-            //     for (var key in data) {
-            //         let ds = [];
-            //         let skey = key.substring(key.length - 5)
-            //         ds.push(skey);
-            //         ds.push(data[key].total_cases);
-            //         ds.push(data[key].deaths);
-            //         ds.push(data[key].recovered);
-            //         dataset.push(ds);
-            //     }
-                // dataset.reverse()
-                // dataset.unshift(['date', 'total_cases', 'deaths', 'recovered'])
-                // var myChart = echarts.init(document.getElementById('states'));
-                // var option = {
-                //     title: {
-                //         text: 'data in the last month'
-                //     },
-                //     legend: {},
-                //     tooltip: {},
-                //     dataset: {
-                //         source: dataset
-                //     },
-                //     xAxis: { type: 'category' },
-                //     yAxis: {},
-            //         series: [
-            //             { type: 'bar' },
-            //             { type: 'bar' },
-            //             { type: 'bar' }
-            //         ]
-            //     };
-            //     myChart.setOption(option);
+                for (var key in data) {
+                    let ds = [];
+                    let skey = key.substring(key.length - 5)
+                    ds.push(skey);
+                    ds.push(data[key].total_cases);
+                    ds.push(data[key].deaths);
+                    ds.push(data[key].recovered);
+                    dataset.push(ds);
+                }
+                dataset.reverse()
+                dataset.unshift(['date', 'total_cases', 'deaths', 'recovered'])
+                var myChart = echarts.init(document.getElementById('states'));
+                var option = {
+                    title: {
+                        text: 'data in the last month'
+                    },
+                    legend: {},
+                    tooltip: {},
+                    dataset: {
+                        source: dataset
+                    },
+                    xAxis: { type: 'category' },
+                    yAxis: {},
+                    series: [
+                        { type: 'bar' },
+                        { type: 'bar' },
+                        { type: 'bar' }
+                    ]
+                };
+                myChart.setOption(option);
 
-            // })
-        //})
+            })
+        })
         var req = unirest("GET", "https://covid-193.p.rapidapi.com/history");
 
         let dataset = [['time', 'total_cases', 'deaths', 'recovered', 'new_case']]
@@ -285,14 +284,13 @@ class Home extends Component {
                 line.push(d.deaths.total)
                 line.push(d.cases.recovered)
                 //line.push(d.tests.total)
-                line.push(d.cases.new)
-                console.log(line)
+                line.push(d.cases.new) 
                 dataset.push(line) 
             })
             dataset.reverse()
             dataset.unshift(['time', 'total_cases', 'deaths', 'recovered', 'new_case']) 
  
-                var myChart = echarts.init(document.getElementById('states'));
+                var myChart = echarts.init(document.getElementById('states2'));
                 var option = {
                     title: {
                         text: 'data in today'
@@ -327,6 +325,14 @@ class Home extends Component {
                             <button type="button" class=" glyphicon glyphicon-retweet " onClick={this.switch.bind(this)}> </button>
                         </div>
                         <div id="states" style={{ "width": '100%', "height": "400px" }}>
+                            <div class='img'>
+                                <div align="center">
+                                    <img style={{ 'width': '90%', "height": "350px" }} class='img' src={require('../img/time.gif')} alt="." ></img>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="states2" style={{ "width": '100%', "height": "400px" }}>
                             <div class='img'>
                                 <div align="center">
                                     <img style={{ 'width': '90%', "height": "350px" }} class='img' src={require('../img/time.gif')} alt="." ></img>
