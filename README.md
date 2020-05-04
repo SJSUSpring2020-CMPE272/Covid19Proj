@@ -44,10 +44,10 @@ https://yuanwanmydemo.mybluemix.net/
 ## Does Quarantine Work for Control/Reduce the Covid-19 Positive Increase Number for A Country?
 
 I have saw a joke on a video game reddit that there are two players argue for their countries. The background is that the U.S just exceed China and become the first country which have the most number of Covid-19 case. 
-Player A: I am so proud to be the citizen of our country! 
-Player B: XXXX XXXX(Some dirty word) Chinese. 
-Player A: Dude, I am an American… 
-Player B: …  
+* Player A: I am so proud to be the citizen of our country! 
+* Player B: XXXX XXXX(Some dirty word) Chinese. 
+* Player A: Dude, I am an American… 
+* Player B: …  
 
 As we all know that China is the country which implemented quarantine rule and promoted every citizen to wear mask. China was the country which had the most Covid-19 case, however, right now China had already controlled the spreading of Covid-19 and restart people’s work and resume cities’ daily operation.  
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics_bon/COVIDNations.png)  
@@ -58,8 +58,16 @@ I track back some news about quarantine rule and government recommended citizens
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics_bon/ImportantUpdates.png)  
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics_bon/searchdate.png)  
 We could assume that the quarantine start date is around Mar 17th, and the promoting face masks date is April 3rd.  Then we will see whether data got affected after these two dates. 
-##
-First of all, we will calculate the positive increase ratio per day. For example, Day 1, the increase number is 100, Day 2 is 50. Then the increase ratio should be -50%. etc…
+
+
+Below is the data about grocery & retailer mobility corresponding to date. The higher mobility, the more people go to grocery & retailer. From the data, we notice that, the mobility have increase dramatically from Mar.11th to Mar.17th, which also is the panic period—people purchased over amount of grocery to prepare for staying at home in long time. After Mar.17, we can view that the mobility begin to decrease. The citizen did efficiently cooperate with government’s rule.
+![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics_bon/retail0.png)  
+
+![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics_bon/retail.png)  
+
+
+
+Then, let check whether some fluctuation reflected on the covid-19 dataset. First of all, we will calculate the positive increase ratio per day. For example, Day 1, the increase number is 100, Day 2 is 50. Then the increase ratio should be -50%. etc…
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics_bon/positiveIncrease.png)  
 
 From the data, we knew that the covid-19 explode date for the US nation should be on Feb.28th. Before Feb.28th, the number of Covid-19 case still a few. And we can jump until Feb 28th.  
