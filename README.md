@@ -81,21 +81,21 @@ And we can view that, after the government implements quarantine rule, the incre
 More importantly, after April 3rd, the covid-19 positive case increase ration from 10-20% down to below 5%. It is very convincing that quarantine rule/promoting mask have positive effect for a country to fight with Covid-19.  
 
 # However
-The decrease of the covid-19 positive case increase speed does not mean the US nation already pass the turning point. Actually, the US nation still have not passed the turning point, though some state already passed the turning point. 
+The negative increase of the COVID-19 positive case does not mean the US nation already pass the turning point. Actually, the US nation still have not passed the turning point, though some state already passed the turning point. 
 
 I have implement a turning point algorithm. Let Just take Italy as the example.
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics_bon/Italytp.png)  
 
-Because the new increase case get influenced every, we can count the average increase number first. We can set the ratio as 3-day a period and 5-day a period. 3-day period could get more in precise date for turning point. However, if the data fluctuate in very huge range, we would recommend to use large scale range. 
+Because the new increase case get influenced everyday, we can count the average increase cases as a period first. We can set the ratio as 3-day a period and 5-day a period. 3-day period could get more in precise date for turning point. However, if the data fluctuate in very huge range, we would recommend to use large scale range. 
 #
 #
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics_bon/tp.png)  
-From the turning point algorithm, we can know that, the turning point will be appear around the 30-32 row of dataframe. 
+From the turning point algorithm, we know that, the turning point will be appear around the 30-32 row of the dataframe. 
 
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics_bon/USAtp.png)  
 
 
-Which between 3-25 to 3-27.  
+Which is between the dates from 3-25 to 3-27.  
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics_bon/linechart.png)  
 and we do find it the increase number vector get decrease after the turning point. 
 
@@ -104,16 +104,16 @@ IF we implement this into the US dataset:
   
 
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics_bon/USntp.png)  
-And we will find it the turning point for the US nation not come yet. But at the period from April 6 to April 10 will have the most increase case per day. After that, later date’s increase case per day is decreasing with very low rate.  
+We will find it the turning point for the US nation not come yet, but at the period from April 6 to April 10 will have the most increase case per day. After that, later new COVID-19 cases per day have negative increase with very low rate.  
 
 Why quarantine rule and wearing mask work, why we still have lot of increase case per day? 
-Previous work, such as quarantine rule and wearing mask, we just control the increase rate for increase covid-19. If we not implements those work, right now, we may have not rather 30000 additional number per day, but 50000, 60000 additional number per day.  
+Previous work, such as the quarantine rule and wearing mask, we just control the increase rate for new COVID-19 cases. If we do not implement those works, right now, we may have not rather 30000 new cases per day, but 50000, 60000 new cases per day.  
 
 Why we still don’t have turning point yet?  
 Although for some state that already have turning point, the U.S is a very big country, that Covid-19 condition is different from states to states. Until all the states from U.S pass the turning point, then the whole nation will pass the turning point then.  
 
 
-In conclusion, we just control the increase from additional case, there is still a distance for us to ultimately beat the virus.  
+In conclusion, we just control and reduce the accelerate rate for new cases per day, however there is still a distance for us to ultimately beat the virus for the whole nation. 
 
 
 
