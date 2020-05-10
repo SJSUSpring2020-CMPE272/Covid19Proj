@@ -43,39 +43,39 @@ https://yuanwanmydemo.mybluemix.net/
 ## Is Wearing Mask Helpful For Us to Prevent From Getting the Covid-19 Virus? 
 ## Does Quarantine Work for Control/Reduce the Covid-19 Positive Increase Number for A Country?
 
-I have saw a joke on a video game reddit that there are two players argue for their countries. The background is that the U.S just exceed China and become the first country which have the most number of Covid-19 case. 
+There is a joke on a game Reddit that there are two players argue for their governments' reaction and solution correspond to Covid-19. And the story background is that the U.S just exceeded China and become the first country which have the most case of Covid-19. 
 * Player A: I am so proud to be the citizen of our country! 
-* Player B: XXXX XXXX(Some dirty word) Chinese. 
+* Player B: XXXX XXXX(Some dirty adjective) Chinese. 
 * Player A: Dude, I am an American… 
 * Player B: …  
 
-As we all know that China is the country which implemented quarantine rule and promoted every citizen to wear mask. China was the country which had the most Covid-19 case, however, right now China had already controlled the spreading of Covid-19 and restart people’s work and resume cities’ daily operation.  
+We all knew that China was the only country which implemented quarantine rule and compulsorily required every citizens to wear mask at the virus exploding period. China had most Covid-19 cases in all over the world, however now China already controlled and weaken Covid-19's spreading in China area and set up plan to resume work and resume cities’ daily operation.  
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics_bon/COVIDNations.png)  
-So, here are two questions: is wearing mask helpful for us to prevent from getting the Covid-19 Virus? And does quarantine work for control or reduce the Covid-19 positive increase case for a country?  
+So, there are two questions may arise: Is wearing mask helpful for us to prevent getting the Covid-19 Virus?  Does the quarantine rule works for control or weaken the Covid-19 positive cases' increase for a country?  
 ##
-I track back some news about quarantine rule and government recommended citizens to wear mask as necessary.  
+I have traced back some previous news about the implementation of quarantine rule and the recommendation correspond to CDC/government suggested citizens to wear mask as necessary.  
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics_bon/15days.png)  
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics_bon/ImportantUpdates.png)  
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics_bon/searchdate.png)  
-We could assume that the quarantine start date is around Mar 17th, and the promoting face masks date is April 3rd.  Then we will see whether data got affected after these two dates. 
+According to news' date, we could assume that the start date to implement the quarantine rule is Mar. 17th, and the date for CDC recommended people wearing facial masks is April 3rd. The dates around these two date (pre or post 2-3 days) also can be  considered as the beginning of the implementation of rule & suggestion. Then we will check whether data give us clues from these two dates. 
 
 
-Below is the data about grocery & retailer mobility corresponding to date. The higher mobility, the more people go to grocery & retailer. From the data, we notice that, the mobility have increase dramatically from Mar.11th to Mar.17th, which also is the panic period—people purchased over amount of grocery to prepare for staying at home in long time. After Mar.17, we can view that the mobility begin to decrease. The citizen did efficiently cooperate with government’s rule.
+Below is the data about grocery & retailer mobility related to date. The higher mobility explained the more people go to grocery & retailer compared to last day. From the data, we can find that, the mobility increased dramatically from Mar.11th to Mar.17th, which also match the panic period in history-—people purchased over amounts of grocery to stay at home for long time. After Mar.17, we can find that the mobility begin to decrease, and the citizens did efficiently cooperate with government’s rule.
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics_bon/retail0.png)  
 
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics_bon/retail.png)  
 
 
 
-Then, let check whether some fluctuation reflected on the covid-19 dataset. First of all, we will calculate the positive increase ratio per day. For example, Day 1, the increase number is 100, Day 2 is 50. Then the increase ratio should be -50%. etc…
+To make the data more readable, we will fix the fluctuation on the dataset. We will calculate the positive increase ratio per day. For example, Day 1, the increase number is 100, Day 2 is 50. Then the increase ratio should be -50%. etc…
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics_bon/positiveIncrease.png)  
 
-From the data, we knew that the covid-19 explode date for the US nation should be on Feb.28th. Before Feb.28th, the number of Covid-19 case still a few. And we can jump until Feb 28th.  
+According to the dataset, we assume that the covid-19 explode date for the US nation should be on Feb.28th. Before Feb.28th, the number of Covid-19 case still a few. Then we can skip till Feb 28th.  
 
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics_bon/feb28.png) 
 
 
-Because the increase ratio is not static, it will influence by each day’s increase number. It would be better for us to count the average to get a period’s increase rate. Then we can compare the data between the period before quarantine and after the quarantine. And the period before promoting mask VS after promoting mask.  
+The trend of increase rate is not stable, it will be influenced by each day’s increase cases dramatically. It would be better for us to count the average to get a period’s increase rate. Then we can compare the data between the period before quarantine and after the quarantine. And the period before promoting mask VS after promoting mask.  
 
 And we can view that, after the government implements quarantine rule, the increase positive ratio got obvious decrease. From 40-50% down to 10-20%, we can view that the covid-19 positive case increase speed get slow down. 
 More importantly, after April 3rd, the covid-19 positive case increase ration from 10-20% down to below 5%. It is very convincing that quarantine rule/promoting mask have positive effect for a country to fight with Covid-19.  
