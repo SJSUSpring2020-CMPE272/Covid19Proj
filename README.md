@@ -38,6 +38,9 @@ https://yuanwanmydemo.mybluemix.net/
 - https://www.kaggle.com/sudalairajkumar/covid19-in-usa  
 - https://covid-19.direct/county/CA/Santa%20Clara  
 - Air quality historical data: https://aqicn.org/data-platform/register/
+- https://www.kaggle.com/lanheken0/community-mobility-data-for-covid19
+- https://www.kaggle.com/tarunkr/covid-19-case-study-analysis-viz-comparisons
+- https://www.kaggle.com/sudalairajkumar/covid19-in-italy#covid19_italy_region.csv
 
 
 ## Is Wearing Mask Helpful For Us to Prevent From Getting the Covid-19 Virus? 
