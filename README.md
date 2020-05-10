@@ -49,7 +49,7 @@ There is a joke on a game Reddit that there are two players argue for their gove
 * Player A: Dude, I am an American… 
 * Player B: …  
 
-We all knew that China was the only country which implemented quarantine rule and compulsorily required every citizens to wear mask at the virus exploding period. China had most Covid-19 cases in all over the world, however now China already controlled and weaken Covid-19's spreading in China area and set up plan to resume work and resume cities’ daily operation.  
+We all knew that China was the only country which implemented quarantine rule and compulsorily required every citizens to wear mask at the virus exploding period. China had most Covid-19 cases in all over the world, however now China already controlled and weaken Covid-19's spreading speed in China area and set up plan to resume work and resume cities’ daily operation.  
 ![Image text](https://github.com/SJSUSpring2020-CMPE272/Covid19Proj/blob/master/pics_bon/COVIDNations.png)  
 So, there are two questions may arise: Is wearing mask helpful for us to prevent getting the Covid-19 Virus?  Does the quarantine rule works for control or weaken the Covid-19 positive cases' increase for a country?  
 ##
